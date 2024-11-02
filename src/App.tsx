@@ -17,7 +17,7 @@ function App() {
           molestie ornare in venen.
         </CardText>
         <div className="Btns">
-          <Button marginRight={"12px"} primary>
+          <Button mRight={"12px"} primary>
             See more
           </Button>
           <Button outlined>Save</Button>

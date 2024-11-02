@@ -1,7 +1,7 @@
 import { css, styled } from "styled-components";
 
 type ButtonPropsType = {
-  marginRight?: string;
+  mRight?: string;
   primary?: boolean;
   outlined?: boolean;
 };
@@ -16,13 +16,13 @@ const Button = styled.button<ButtonPropsType>`
   border: none;
   border-radius: 5px;
   transition: 0.5s;
-  margin-right: ${(props) => props.marginRight || "0px"};
+  margin-right: ${(props) => props.mRight || "0px"};
 
   ${(props) =>
     props.primary &&
     css<ButtonPropsType>`
       color: #ffffff;
-      background: #4e71fe;
+      background: ${(props) => props.theme.colors.btnColor};
 
       &:hover {
         background: #3c55bb;
@@ -32,12 +32,12 @@ const Button = styled.button<ButtonPropsType>`
   ${(props) =>
     props.outlined &&
     css<ButtonPropsType>`
-      color: #4e71fe;
+      color: ${(props) => props.theme.colors.btnColor};
       background: #fff;
-      border: 2px solid #4e71fe;
+      border: 2px solid ${(props) => props.theme.colors.btnColor};
 
       &:hover {
-        background: #4e71fe;
+        background: ${(props) => props.theme.colors.btnColor};
         color: #ffffff;
         cursor: pointer;
       }
