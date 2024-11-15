@@ -5,7 +5,6 @@ const CardText = styled.p`
   font-size: 12px;
   line-height: 1rem;
   color: #abb3ba;
-  padding: 0 10px;
 `;
 
 export default CardText;

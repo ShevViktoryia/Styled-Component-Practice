@@ -1,7 +1,6 @@
 import { css, styled } from "styled-components";
 
 type ButtonPropsType = {
-  mRight?: string;
   primary?: boolean;
   outlined?: boolean;
 };
@@ -12,11 +11,11 @@ const Button = styled.button<ButtonPropsType>`
   font-weight: 700;
   font-size: 10px;
   line-height: 2;
+  display: inline-block;
   color: #fff;
   border: none;
   border-radius: 5px;
   transition: 0.5s;
-  margin-right: ${(props) => props.mRight || "0px"};
 
   ${(props) =>
     props.primary &&
